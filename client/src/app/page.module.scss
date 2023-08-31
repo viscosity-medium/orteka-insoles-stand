@@ -1,0 +1,40 @@
+.contentWrapper{
+    margin: 10vw 1vw 10vw;//200px 20px 100px
+}
+
+.h2 {
+    font-size: 11.2vw;//128px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.h3 {
+    font-size: 9vw;//100px;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.clickHand {
+    margin: 6vw 0;//150px 0;
+    animation-name: clickHandAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes clickHandAnimation {
+
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1)
+    }
+
+}

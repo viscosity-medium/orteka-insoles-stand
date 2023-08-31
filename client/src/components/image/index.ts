@@ -1,0 +1,1 @@
+export {CustomImage as Image} from "./ui/CustomImage"

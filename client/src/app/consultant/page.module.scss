@@ -1,0 +1,41 @@
+.contentWrapper {
+    height: 100%;
+}
+
+.h2 {
+    font-size: 8.1481vw;//88px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+
+.consultantImage{
+    position: relative;
+    border-radius: 4.6296vw;//50px;
+}
+
+.title {
+    margin: 3.7037vw 2.2222vw;//40px 24px;
+    font-size: 6.6666vw;//72px;
+    text-transform: uppercase;
+    background-color: var(--orange);
+    border-radius: 1.8518vw;//20px;
+}
+
+.backButton {
+    margin: 2.2222vw;//24px;
+    border: 2px solid var(--lightGrey);
+    border-radius: 1.8518vw;//20px;
+}
+
+.backButtonText {
+    font-size: 4.8148vw;//52px;
+    color: var(--lightGrey);
+    fill: var(--lightGrey);
+    text-transform: uppercase;
+}
+
+.backButtonImage {
+    margin-left: 1.8518vw;//20px;
+    display: inline-block;
+}

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --backgroundColor: #EDEDED;
+    --white: #FFFFFF;
+    --lightBlack: #1D1D1B;
+    --lightGrey: #C6C6C6;
+    --orange: #FF6E00;
+    --aquamarine: #00A7B8;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+
+    }
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-size: 16px;
+}

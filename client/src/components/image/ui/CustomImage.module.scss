@@ -1,0 +1,18 @@
+
+
+.positionAbsolute {
+    position: absolute;
+    z-index: -1;
+};
+
+.positionRelative {
+    position: relative;
+};
+
+.objectFitContain {
+	object-fit: contain;
+};
+
+.objectFitCover {
+    object-fit: cover;
+};

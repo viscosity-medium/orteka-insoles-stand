@@ -1,0 +1,22 @@
+# dependencies
+/client/node_modules
+/server/node_modules
+/client/.pnp
+/client/.pnp.js
+/client/.pnp
+/server/.pnp.js
+
+# next.js
+/client/.next/
+/client/out/
+
+# production build
+/client/build
+
+# local env files
+/client/.env
+/server/.env
+
+# typescript
+/client/*.tsbuildinfo
+/client/next-env.d.ts

@@ -1,0 +1,1 @@
+export {InsoleCard} from "./ui/InsoleCard";
