@@ -45,6 +45,8 @@ export const onButtonWithImageClick = ({
     activityLevel
 }: OnButtonClick) => {
 
+    clearTimeout(timeoutId);
+
     if (gender){
         dispatch(answersDataActions.setGender(gender));
     }
@@ -60,7 +62,7 @@ export const onButtonWithImageClick = ({
     else if(activityLevel){
         dispatch(answersDataActions.setActivityLevel(activityLevel));
     }
-    clearTimeout(timeoutId);
+
     linkRef.current?.click();
 
 };

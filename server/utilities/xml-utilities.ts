@@ -6,7 +6,7 @@ import {fileSystemUtilities} from "./file-system-utilities";
 const defineXmlContent: DefineXmlContent = ({arduinoData}) => {
 
     const parsedArrayArray = arduinoData;
-    return parsedArrayArray[parsedArrayArray.length - 2] as number;
+    return parsedArrayArray[parsedArrayArray.length - 1] as number;
 
 };
 
@@ -16,10 +16,11 @@ export const createXmlTemplate:CreateXmlTemplate = async ({ arduinoData, fileNam
         arduinoData
     });
 
-    console.log(`xml content: ${xmlContent !== undefined ? xmlContent : 0}`)
+    console.log(`xml content: ${xmlContent !== undefined ? xmlContent : 0}`);
 
     await fileSystemUtilities.writeFile({
         data: xmlTemplate({xmlContent: xmlContent !== undefined ? xmlContent : 0}),
         relativePathArray: ["static", "files", fileName]
     });
+
 };

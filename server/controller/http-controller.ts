@@ -17,28 +17,35 @@ class HttpController {
 
     async sendDataToController(req: Request, res: Response){
 
-        const {
-            // gender,
-            // discomfortArea,
-            // footType,
-            // activityLevel,
-            insoles
-        }: FetchApiProps = req.body;
+        try {
+            const {
+                // gender,
+                // discomfortArea,
+                // footType,
+                // activityLevel,
+                insoles
+            }: FetchApiProps = req.body;
+    
+            const insolesNumbersArray = insoles?.map(insole => {
+                return insole.number
+            });
+            
+            const stringifiedData = JSON.stringify(insolesNumbersArray);
+            const dataToWrite = stringifiedData.trim() === "[1]" ? "[]" : stringifiedData;
+    
+            console.log(dataToWrite);
+            serialPort?.write(
+                dataToWrite + "\n",
+                (err: any) => { err !== undefined && console.log(`Error: ${err}`)}
+            );
+    
+            return res.json({"res": "res"});
+        } catch (error) {
+            if(error instanceof TypeError) {
+                console.log("\x1b[33m", "Error in sendDataToController (HttpContoller):", "\x1b[31m", error.message, "\x1b[0m")
 
-        const insolesNumbersArray = insoles?.map(insole => {
-            return insole.number
-        });
-        
-        const stringifiedData = JSON.stringify(insolesNumbersArray);
-        const dataToWrite = stringifiedData.trim() === "[1]" ? "[]" : stringifiedData;
-
-        console.log(dataToWrite);
-        serialPort?.write(
-            dataToWrite + "\n",
-            (err: any) => { err !== undefined && console.log(`Error: ${err}`)}
-        );
-
-        return res.json({"res": "res"});
+            }
+        }
 
     }
 

@@ -1,3 +1,6 @@
+.git
+.idea
+
 # dependencies
 /client/node_modules
 /server/node_modules
@@ -12,6 +15,7 @@
 
 # production build
 /client/build
+/server/_ts-build
 
 # local env files
 /client/.env
