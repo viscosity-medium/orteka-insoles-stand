@@ -9,10 +9,10 @@ export interface FetchApiProps extends QuestionnaireDataParams {
 }
 
 const headers = {
-        "Content-type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, OPTIONS, POST, PUT",
-        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+    "Content-type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, OPTIONS, POST, PUT",
+    "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
 }
 
 class FetchApi {
@@ -20,7 +20,7 @@ class FetchApi {
     constructor(
         public baseUrl: string
     ) {
-        this.baseUrl = `${baseUrl}/server-api/`
+        this.baseUrl = `http://${process.env.NEXT_PUBLIC_HTTP_HOST}:${process.env.NEXT_PUBLIC_HTTP_SERVER_PORT}/server-api/`
     };
 
     async postRequest({
@@ -32,17 +32,21 @@ class FetchApi {
         endpoint
     }: FetchApiProps){
 
-        await fetch(`${this.baseUrl}${endpoint}`, {
-            method: 'POST',
-            headers,
-            body: JSON.stringify({
-                gender,
-                discomfortArea,
-                footType,
-                activityLevel,
-                insoles
-            })
-        });
+        try {
+            await fetch(`${this.baseUrl}${endpoint}`, {
+                method: 'POST',
+                headers,
+                body: JSON.stringify({
+                    gender,
+                    discomfortArea,
+                    footType,
+                    activityLevel,
+                    insoles
+                })
+            });
+        } catch (error) {
+            console.log(error);
+        }
 
     };
 

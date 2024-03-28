@@ -12,6 +12,7 @@
 
 .backButton {
     margin: 2.2222vw;//24px;
+    color: var(--lightGrey);
     border: 2px solid var(--lightGrey);
     border-radius: 1.8518vw;//20px;
 }
@@ -21,6 +22,10 @@
     color: var(--lightGrey);
     fill: var(--lightGrey);
     text-transform: uppercase;
+
+    h3 {
+        color: var(--lightGrey);
+    }
 }
 
 .backButtonImage {

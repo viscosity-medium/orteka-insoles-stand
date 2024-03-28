@@ -1,3 +1,5 @@
+'use client'
+
 import {DefinePageContent} from "@/app/question/[id]/page.types";
 
 export const definePageContent: DefinePageContent = ({pid}) => {

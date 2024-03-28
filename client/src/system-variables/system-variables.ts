@@ -13,7 +13,7 @@ export const systemVariables: SystemVariables = {
     httpServerPort: +process.env.NEXT_PUBLIC_HTTP_SERVER_PORT!,
     httpClientPort: +process.env.NEXT_PUBLIC_HTTP_CLIENT_PORT!,
 
-    httpClientHost: `http://${process.env.NODE_MODE === "Development" ? "localhost" : process.env.NEXT_PUBLIC_HTTP_HOST}:${process.env.NEXT_PUBLIC_HTTP_CLIENT_PORT}`,
-    httpServerHost: `http://${process.env.NODE_MODE === "Development" ? "localhost" : process.env.NEXT_PUBLIC_HTTP_HOST}:${process.env.NEXT_PUBLIC_HTTP_SERVER_PORT}`,
+    httpClientHost: `http://${process.env.NEXT_PUBLIC_HTTP_HOST}:${process.env.NEXT_PUBLIC_HTTP_CLIENT_PORT}`,
+    httpServerHost: `http://${process.env.NEXT_PUBLIC_HTTP_HOST}:${process.env.NEXT_PUBLIC_HTTP_SERVER_PORT}`,
 
 }

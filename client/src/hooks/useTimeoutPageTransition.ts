@@ -1,3 +1,5 @@
+'use client'
+
 import {useRouter} from "next/navigation";
 import { useResetArduinoData } from "./useFetchAnswersData";
 import { fetchApi } from "@/api/api";

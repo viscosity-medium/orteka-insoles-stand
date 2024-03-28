@@ -1,3 +1,5 @@
+'use strict';
+
 import ArchNoInfo from "@/assets/button-arch-no-info.svg";
 import {useRef} from "react";
 import {onButtonWithImageClick} from "@/components/button/model/button.helpers";

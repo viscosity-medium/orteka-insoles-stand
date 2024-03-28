@@ -34,6 +34,7 @@ export const onResetButtonClick = async ({dispatch, linkRef, timeoutId}: {dispat
         ],
         endpoint: "send-data-to-controller"
     })
+    console.log("reset")
     clearTimeout(timeoutId);
     linkRef.current?.click();
 

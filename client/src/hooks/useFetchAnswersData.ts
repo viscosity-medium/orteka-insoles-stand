@@ -1,3 +1,5 @@
+'use client'
+
 import {useAppDispatch} from "@/store/store";
 import {useSelector} from "react-redux";
 import {getActivityLevel, getDiscomfortArea, getFootType, getGender} from "@/store/reducers/answersData.selectors";
