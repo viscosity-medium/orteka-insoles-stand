@@ -1,7 +1,9 @@
-import './globals.css'
-import type {Metadata} from 'next'
-import localFont from 'next/font/local'
+import './globals.css';
+import type {Metadata} from 'next';
+import localFont from 'next/font/local';
 import {FrameBorder} from "@/components/frameBorder";
+import Head from 'next/head';
+import { InnerWrapper } from '@/components/innerWrapper';
 
 const defaultFont = localFont({src: "../fonts/TTNorms-Bold.otf"});
 
@@ -15,31 +17,41 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
     return (
-        <html lang="en">
+        <html 
+            lang="en"
+        >
+             <Head>
+                <title>{"Orteka"}</title>
+                <meta name="description" content={"Orteka client"} />
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+            </Head>
             <body
                 className={`${
                     defaultFont.className
                 }`}
                 >
             <>
-                <main
-                    className="w-screen h-screen p-9"
-                >
-
-                    <FrameBorder
-                        borderType={"outer"}
-                        setStore={true}
+                <InnerWrapper>
+                    <main
+                        className="w-screen h-screen p-9"
                     >
+
                         <FrameBorder
-                            borderType={"inner"}
+                            borderType={"outer"}
+                            setStore={true}
                         >
-                            {
-                                children
-                            }
+                            <FrameBorder
+                                borderType={"inner"}
+                            >
+                                {
+                                    children
+                                }
+                            </FrameBorder>
                         </FrameBorder>
-                    </FrameBorder>
-                </main>
+                    </main>
+                </InnerWrapper>
             </>
             </body>
         </html>

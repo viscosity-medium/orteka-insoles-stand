@@ -24,8 +24,8 @@ const ConsultantPageContent = () => {
                 justify={"between"}
                 className={cls.contentWrapper}
             >
-                <Image
-                    src={ConsultantImage}
+                <img
+                    src={ConsultantImage.src}
                     alt={"consultant.png"}
                     className={cls.consultantImage}
                 />
